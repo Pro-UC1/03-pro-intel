@@ -1,0 +1,205 @@
+/* Add your CSS here */
+
+/* Style for the header section */
+.intel-header {
+  /* Intel blue background */
+  background-color: #0071c5;
+  /* Add some padding inside the header */
+  padding: 100px 20px;
+  /* Center all text and items */
+  text-align: center;
+  /* White text for contrast */
+  color: white;
+}
+
+/* Style for the Intel logo */
+.intel-logo {
+  /* Set a fixed width for the logo */
+  width: 80px;
+  /* Add some space below the logo */
+  margin-bottom: 10px;
+}
+
+/* Style for the main headline */
+.headline {
+  /* Make the headline much bigger than the logo */
+  font-size: 3em; /* Increased size so it's bigger than the logo */
+  /* Add some space below the headline */
+  margin-bottom: 10px;
+  /* Use a simple, clean font */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style for the subheading */
+.subheading {
+  /* Slightly smaller text */
+  font-size: 1.2em;
+  /* Lighter font weight */
+  font-weight: 300;
+  /* Use the same clean font */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Timeline Scroll Snap Enhancement --- */
+
+/* Flexbox container for timeline cards */
+.timeline-cards {
+  display: flex; /* Arrange cards in a row */
+  flex-direction: row; /* Horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable scroll snap on x-axis */
+  gap: 16px; /* Space between cards */
+  padding: 16px;
+  /* Hide scrollbar for a cleaner look (optional) */
+  scrollbar-width: thin;
+  scrollbar-color: #02edfa #f5f5f5;
+}
+
+/* Style for each timeline card */
+.timeline-cards > div {
+  background: #f5f5f5; /* Light background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+  padding: 16px; /* Space inside each card */
+  width: 300px; /* Fixed width for cards */
+  box-sizing: border-box; /* Include padding in width */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    background 0.3s; /* Smooth hover effect */
+  /* Each card snaps to the start of the scroll area */
+  scroll-snap-align: start; /* Snap each card to the start */
+  min-width: 300px; /* Ensure cards have a minimum width */
+}
+
+/* Use Space Grotesk font for card headings (h2 and h3) */
+.timeline-cards > div h2,
+.timeline-cards > div h3 {
+  font-family: 'Space Grotesk', Arial, sans-serif; /* Use the imported Google Font */
+  font-weight: 700; /* Make headings bold */
+}
+
+/* Use Lato font for card paragraphs */
+.timeline-cards > div p {
+  font-family: 'Lato', Arial, sans-serif; /* Use the imported Steve Mattson font */
+  font-weight: 400; /* Normal weight for easy reading */
+}
+
+/* Make cards a bit bigger and add a shadow on hover for a nice effect */
+.timeline-cards > div:hover {
+  transform: scale(1.05) rotate(-1deg); /* Slightly grow and rotate the card */
+  background: #44bbcb; /* Slightly different background on hover */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* Add a deeper shadow on hover */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    background 0.3s;
+}
+
+/* Make sure the card returns smoothly to normal when not hovered */
+.timeline-cards > div {
+  /* ...existing code... */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+    background 0.3s;
+  /* ...existing code... */
+}
+
+/* Make images inside timeline cards the same size */
+.timeline-cards > div img,
+.card-image-container img {
+  width: 100%;           /* Image fills the width of the card */
+  height: 180px;         /* Set a fixed height for all images */
+  object-fit: cover;     /* Crop images to fill the area without stretching */
+  display: block;        /* Removes small gaps below images */
+  border-radius: 4px;    /* Slightly rounded corners */
+  margin-bottom: 12px;   /* Space below the image */
+}
+
+/* Hide extra details by default */
+.timeline-cards > div .card-details {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+  background: #92b8e8; /* Light blue background for details */
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+ 
+
+/* Show extra details when hovering over the card */
+.timeline-cards > div:hover .card-details {
+  display: block; /* Show details on hover */
+  opacity: 1; /* Make sure details are fully visible */
+}
+
+/* Make the image container a relative box */
+.card-image-container {
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+/* Style the image inside the container */
+.card-image-container img {
+  width: 100%; /* Image fills the container */
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  
+}
+
+/* Show details with a linear transition effect when hovering over the image container */
+.card-details {
+  display: none; /* Hidden at first */
+  opacity: 0;    /* Fully transparent */
+  position: absolute; /* Place on top of the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 93, 212, 0.7); /* Transparent blue background */
+  color: black; /* Black text for details */
+  padding: 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Center the text inside the box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Add a linear transition for opacity */
+  transition: opacity 0.5s;
+  transition-timing-function: linear;
+}
+
+/* Show details with fade-in when hovering over the image container */
+.card-image-container:hover .card-details {
+  display: flex;   /* Show the details box */
+  opacity: 1;      /* Fully visible */
+}
+
+/* Make the year above the image red */
+.timeline-cards > div h2 {
+  color: rgb(7, 76, 251); /* Set the year text to red */
+}
+
+/* Responsive: Make cards take full width on small screens */
+@media (max-width: 700px) {
+  .timeline-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+  .timeline-cards > div {
+    width: 100%; /* Cards take most of the screen width */
+    min-width: unset;
+  }
+}
+
+/* Center the page instructions at the bottom */
+.page-instructions {
+  text-align: center; /* This centers the text */
+  margin-top: 20px;   /* Adds some space above the instructions */
+}
