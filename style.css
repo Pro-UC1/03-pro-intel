@@ -118,7 +118,7 @@
 }
 
 /* Hide extra details by default */
-.timeline-cards > div .card-details {
+.timeline-cards > div .card-details  {
   display: none; /* Hidden by default */
   margin-top: 10px;
   background: #92b8e8; /* Light blue background for details */
@@ -129,7 +129,7 @@
  
 
 /* Show extra details when hovering over the card */
-.timeline-cards > div:hover .card-details {
+.timeline-cards > div:hover .card-details{
   display: block; /* Show details on hover */
   opacity: 1; /* Make sure details are fully visible */
 }
@@ -157,7 +157,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(60, 93, 212, 0.7); /* Transparent blue background */
+  background: rgba(95, 127, 242, 0.7); /* Transparent blue background */
   color: black; /* Black text for details */
   padding: 16px;
   border-radius: 4px;
@@ -171,7 +171,10 @@
   /* Add a linear transition for opacity */
   transition: opacity 0.5s;
   transition-timing-function: linear;
+ 
+
 }
+
 
 /* Show details with fade-in when hovering over the image container */
 .card-image-container:hover .card-details {
