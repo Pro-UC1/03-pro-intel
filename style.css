@@ -9,7 +9,7 @@
   /* Center all text and items */
   text-align: center;
   /* White text for contrast */
-  color: white;
+  color: rgb(245, 245, 243);
 }
 
 /* Style for the Intel logo */
@@ -22,11 +22,8 @@
 
 /* Style for the main headline */
 .headline {
-  /* Make the headline much bigger than the logo */
-  font-size: 3em; /* Increased size so it's bigger than the logo */
-  /* Add some space below the headline */
+  font-size: 2.5em; /* Largest font for h1 */
   margin-bottom: 10px;
-  /* Use a simple, clean font */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -51,13 +48,13 @@
   gap: 16px; /* Space between cards */
   padding: 16px;
   /* Hide scrollbar for a cleaner look (optional) */
-  scrollbar-width: thin;
-  scrollbar-color: #02edfa #f5f5f5;
+  scrollbar-width: medium; /* For Firefox */
+  scrollbar-color: #d32738 #f5f5f5;
 }
 
 /* Style for each timeline card */
 .timeline-cards > div {
-  background: #f5f5f5; /* Light background for cards */
+  background: #73a1af; /* Light background for cards */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
   padding: 16px; /* Space inside each card */
@@ -72,6 +69,25 @@
   min-width: 300px; /* Ensure cards have a minimum width */
 }
 
+/* Style for the year above the image */
+.timeline-cards > div h2 {
+  color: rgb(153, 167, 236); /* Set the year text to red */
+}
+
+/* Style for h2 headings (card titles) */
+h2.card-title {
+  font-size: 2em; /* Medium font for h2 */
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Style for h3 headings (if used) */
+h3 {
+  font-size: 1.5em; /* Smallest font for h3 */
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-weight: 700;
+}
+
 /* Use Space Grotesk font for card headings (h2 and h3) */
 .timeline-cards > div h2,
 .timeline-cards > div h3 {
@@ -81,8 +97,8 @@
 
 /* Use Lato font for card paragraphs */
 .timeline-cards > div p {
-  font-family: 'Lato', Arial, sans-serif; /* Use the imported Steve Mattson font */
-  font-weight: 400; /* Normal weight for easy reading */
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 400;
 }
 
 /* Make cards a bit bigger and add a shadow on hover for a nice effect */
@@ -121,7 +137,7 @@
 .timeline-cards > div .card-details  {
   display: none; /* Hidden by default */
   margin-top: 10px;
-  background: #92b8e8; /* Light blue background for details */
+  background: #a39e53;
   padding: 8px;
   border-radius: 4px;
   font-size: 0.95em;
@@ -180,11 +196,6 @@
 .card-image-container:hover .card-details {
   display: flex;   /* Show the details box */
   opacity: 1;      /* Fully visible */
-}
-
-/* Make the year above the image red */
-.timeline-cards > div h2 {
-  color: rgb(7, 76, 251); /* Set the year text to red */
 }
 
 /* Responsive: Make cards take full width on small screens */

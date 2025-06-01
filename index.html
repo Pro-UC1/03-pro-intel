@@ -389,5 +389,31 @@
     </small>
   </footer>
 
+  <!-- Add this before the closing </body> tag -->
+<script>
+  // This script checks the page language and sets the direction (RTL or LTR)
+  // If the language is Arabic, it sets RTL. If English, it sets LTR.
+
+  function updateDirection() {
+    // Get the main <html> tag
+    var htmlTag = document.documentElement;
+    // If the language is Arabic
+    if (htmlTag.lang === "ar") {
+      htmlTag.setAttribute("dir", "rtl");
+      document.body.style.textAlign = "right"; // Align text to the right
+    } else {
+      htmlTag.setAttribute("dir", "ltr");
+      document.body.style.textAlign = "left"; // Align text to the left
+    }
+  }
+
+  // Run the function when the page loads
+  updateDirection();
+
+  // Example: If you change the language using a button, call updateDirection() after changing lang
+  // Example (not active in this page):
+  // document.documentElement.lang = "en";
+  // updateDirection();
+</script>
 </body>
 </html>
