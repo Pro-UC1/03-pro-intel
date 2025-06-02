@@ -218,20 +218,4 @@ h3 {
   margin-top: 20px;   /* Adds some space above the instructions */
 }
 
-/* Style for 'Learn More' links */
-.learn-more-link {
-  background-color: #003366; /* Dark blue background */
-  color: #fff;               /* White text */
-  padding: 8px 16px;         /* Some padding */
-  border-radius: 4px;        /* Rounded corners */
-  text-decoration: none;     /* Remove underline */
-  display: inline-block;     /* Make it look like a button */
-  margin-top: 8px;           /* Space above the link */
-  font-size: 1em;            /* Normal font size */
-}
-
-/* Change color on hover for better accessibility */
-.learn-more-link:hover {
-  background-color: #9bc8f5; /* Lighter blue on hover */
-  color: #fff;
-}
+ 
