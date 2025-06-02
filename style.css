@@ -137,7 +137,7 @@ h3 {
 .timeline-cards > div .card-details  {
   display: none; /* Hidden by default */
   margin-top: 10px;
-  background: #a39e53;
+  background: #93bcf5;
   padding: 8px;
   border-radius: 4px;
   font-size: 0.95em;
@@ -216,4 +216,22 @@ h3 {
 .page-instructions {
   text-align: center; /* This centers the text */
   margin-top: 20px;   /* Adds some space above the instructions */
+}
+
+/* Style for 'Learn More' links */
+.learn-more-link {
+  background-color: #003366; /* Dark blue background */
+  color: #fff;               /* White text */
+  padding: 8px 16px;         /* Some padding */
+  border-radius: 4px;        /* Rounded corners */
+  text-decoration: none;     /* Remove underline */
+  display: inline-block;     /* Make it look like a button */
+  margin-top: 8px;           /* Space above the link */
+  font-size: 1em;            /* Normal font size */
+}
+
+/* Change color on hover for better accessibility */
+.learn-more-link:hover {
+  background-color: #9bc8f5; /* Lighter blue on hover */
+  color: #fff;
 }
